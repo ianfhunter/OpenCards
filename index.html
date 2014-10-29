@@ -1,0 +1,29 @@
+<html>
+<head>           
+        <script id="vertex" type="x-shader"></script>  
+        <script id="fragment" type="x-shader"></script>        
+        <script type="text/javascript">
+                function init(){
+                    canvas = document.getElementById("mycanvas");
+                    gl = canvas.getContext("experimental-webgl");
+                    gl.viewport(0, 0, canvas.width, canvas.height);
+                    gl.clearColor(0, 0.5, 0, 1);
+                    gl.clear(gl.COLOR_BUFFER_BIT);
+                }
+        </script>
+</head>
+<body onload="init()">
+    <div id="main" style="overflow:hidden;height:600px">
+        <!-- <select name="sometext" size="29" style="width:160px">
+          <option>Please Load in A Deck</option>
+        </select> -->
+        <div id="active_card" style="display:inline-block;height:100%"> 
+            <h1>Card Details</h1>
+            <div>No Card Selected</div>
+        </div>
+        <div style="display:inline-block;height">
+            <canvas id="mycanvas" width="600" height="400"></canvas>
+        </div>
+    </div>
+</body>
+</html>
