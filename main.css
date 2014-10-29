@@ -1,0 +1,96 @@
+body {
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  overflow-y:hidden;
+}
+#menubar{
+	position:absolute;
+	background:grey;
+	height:18px;
+    left: 0; top: 0; right: 0;	//center
+}
+
+
+#opponent-hand-container{
+	text-align:center;
+	position:absolute;
+    left: 0; top: 18; right: 0;	//center
+}
+
+#player-hand-container{
+	text-align:center;
+	position:absolute;
+    left: 0; bottom: 18; right: 0;	//center
+}
+.hand{
+}
+
+.trapezoid {
+  background-size: 100% 100%;
+  width:100px; height:140px;
+  -webkit-transform: rotateX(10deg);
+  transform: rotateX(10deg);
+  display:inline-block;
+}
+
+#opponent-hand-container .hand .trapezoid{
+  background-image: url("images/card2.jpg");
+  margin-bottom:-10px;
+}
+#player-hand-container .hand .trapezoid{
+  background-image: url("images/card.jpg");
+  margin-top:10px;
+}
+#focus-card-container{
+	width: 300px;
+	padding-top:18px;
+	background-color:lightgrey;
+	height: 100%;
+	text-align:center;
+}
+#focus-card{
+	padding-top:10px;
+	max-height:300px;
+	max-width:200px;
+}
+#focus-content {
+    text-align:left;
+}
+#focus-content *{
+	padding-left:5px;
+	display:inline;
+}
+
+#ability{
+	padding-left:0px;
+}
+#ability  text{
+	display: none;
+}
+
+#ability:hover text{
+    display: block;
+}
+#player-stat-container{
+	position:absolute;
+	top:18px; right:0px;
+	width: 300px;
+	background-color:lightgrey;
+	height: 100%;
+	text-align:center;
+}
+#opponent-img{
+	margin-top:10px;
+}
+.statsheet table{
+	text-align:center;
+	width:100%;
+}
+.statsheet img{
+  height:100px;
+  width:100px;
+}
+.turn input{
+	width:200px;
+	margin-right:10px;
+}
