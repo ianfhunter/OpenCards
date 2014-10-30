@@ -1,0 +1,1 @@
+rootdir = "/var/www/OpenCards"
