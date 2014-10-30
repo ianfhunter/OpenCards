@@ -1,0 +1,27 @@
+{
+    "game_title":"YuGiOh!",
+    "rules":{
+        "first_draw":5,
+        "allow_face_down_placing":true,
+        "allow_sideways_placing":true,
+		"first_turn_disabled_phases: ["draw","battle"]
+		"field_limits":{
+			"monster":5
+			"trap":[5,"spell"]
+		}
+		"turn_limits":{
+			"summoning":1
+		}
+    }
+    "features":{
+		health_bar:8000,
+		mana_bar:null
+    }
+	"phases":{
+		"draw":"optional",
+		"stand-by":"optional",
+		"place",
+		"battle",
+		"battle"
+	}
+}

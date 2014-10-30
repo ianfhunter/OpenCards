@@ -1,8 +1,0 @@
-{
-    "game_title":"YuGiOh!",
-    "rules":{
-        "first_draw":7,
-        "allow_face_down_placing":true,
-        "allow_sideways_placing":true
-    }
-}
