@@ -28,19 +28,24 @@ body {
 .trapezoid {
   background-size: 100% 100%;
   width:100px; height:140px;
-  -webkit-transform: rotateX(10deg);
-  transform: rotateX(10deg);
+
   display:inline-block;
 }
 
 #opponent-hand-container .hand .trapezoid{
-  background-image: url("../images/card2.jpg");
   margin-bottom:-10px;
+    -webkit-transform: rotateX(8deg) scale(0.8);
+    margin-right: -9px;
+    margin-left: -9px;
+  transform: rotateX(8deg) scale(0.8);
 }
 #player-hand-container .hand .trapezoid{
-  background-image: url("../images/card.jpg");
   margin-top:10px;
+  -webkit-transform: rotateX(8.5deg);
+  transform: rotateX(8.5deg);
 }
+
+
 #focus-card-container{
 	width: 300px;
 	padding-top:18px;
@@ -93,4 +98,13 @@ body {
 .turn input{
 	width:200px;
 	margin-right:10px;
+}
+
+/* Hovers */
+.trapezoid:hover {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+#player-hand-container .gainFocus {
+    transform: rotateX(0deg) scale(1.2) !important;    
 }

@@ -2,6 +2,8 @@
 <head>           
 	<link rel="stylesheet" type="text/css" href="static/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<script src="static/js/jquery-2.1.1.min.js"></script>
+	<script src="static/js/card_focus.js"></script>
 </head>
 	<body>
 		<div id="menubar">
@@ -12,11 +14,11 @@
 		</div>
 		<div id="opponent-hand-container">
 			<div class="hand">
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
+				<div class="trapezoid" style="background-image: url('static/images/cardback.png');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/cardback.png');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/cardback.png');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/cardback.png');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/cardback.png');"></div>
 			</div>
 			<div class="turn"> 
 				<input type="range" min="1" max="5" value="1" />
@@ -28,17 +30,17 @@
 				<button type="button">Advance Stage</button>
 			</div>
 			<div class="hand">
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
-				<div class="trapezoid"></div>
+				<div class="trapezoid" style="background-image: url('static/images/card6.jpg');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/card7.jpg');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/card8.jpg');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/card9.jpg');"></div>
+				<div class="trapezoid" style="background-image: url('static/images/card10.png');"></div>
 			</div>
 		</div>
 
 		<div id="focus-card-container">
 			<img id="focus-card" src="static/images/card.jpg" />
-			<h3> {{card_title }} </h3>
+			<h3> {{card_title}} </h3>
 			<div id="focus-content">
 				<div id="ability">
 					<h4> Ability #1: </h4>
