@@ -4,14 +4,19 @@
         "first_draw":5,
         "allow_face_down_placing":true,
         "allow_sideways_placing":true,
-		"first_turn_disabled_phases: ["draw","battle"]
+		"first_turn_disabled_phases: ['draw','battle'],
 		"field_limits":{
 			"monster":5
 			"trap":[5,"spell"]
-		}
+		},
 		"turn_limits":{
 			"summoning":1
 		}
+    },
+    deck_rules:{
+        "deck_limit":60,
+        "minimum_deck":40
+        "max_spell_cards":10
     }
     "features":{
 		health_bar:8000,
