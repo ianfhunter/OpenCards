@@ -5,7 +5,7 @@ body {
 }
 #menubar{
 	position:absolute;
-	background:grey;
+	background:#DBDBDB;
 	height:18px;
     left: 0; top: 0; right: 0;	//center
 }
@@ -13,14 +13,10 @@ body {
 
 #opponent-hand-container{
 	text-align:center;
-	position:absolute;
-    left: 0; top: 18; right: 0;	//center
 }
 
 #player-hand-container{
 	text-align:center;
-	position:absolute;
-    left: 0; bottom: 18; right: 0;	//center
 }
 .hand{
 }
@@ -47,14 +43,13 @@ body {
 
 
 #focus-card-container{
-	width: 300px;
-	padding-top:18px;
-	background-color:lightgrey;
+	width: 218px;
+	background-color:#8C8C8C;
 	height: 100%;
 	text-align:center;
 }
 #focus-card{
-	padding-top:10px;
+	padding-top:28px;
 	max-height:300px;
 	max-width:200px;
 }
@@ -77,23 +72,37 @@ body {
     display: block;
 }
 #player-stat-container{
-	position:absolute;
-	top:18px; right:0px;
 	width: 300px;
-	background-color:lightgrey;
+	background-color:#8C8C8C;
 	height: 100%;
+    display: flex;
+    flex-direction:column;
+    align:items:flex-start;
 	text-align:center;
 }
+
 #opponent-img{
-	margin-top:10px;
+	margin-top:8px;
+    float:left;
+    margin-left: 5px;
 }
 .statsheet table{
 	text-align:center;
-	width:100%;
+	width:100px;
+    margin:auto;
 }
 .statsheet img{
   height:100px;
   width:100px;
+}
+.statsheet h3{
+    padding-top: 10px;
+}
+.statsheet:not(:first-child){
+    margin-top:-22px;
+}
+.statsheet:first-child{
+    margin-top: -2px;
 }
 .turn input{
 	width:200px;
@@ -107,4 +116,30 @@ body {
 }
 #player-hand-container .gainFocus {
     transform: rotateX(0deg) scale(1.2) !important;    
+}
+#playarea{
+    height: 100%;
+    flex:1;
+    display: flex;
+    flex-direction:column;
+    align:items:flex-start;
+}
+#board{
+    background-color: blue;
+    min-height: 30px;
+    flex:1;
+}
+#mega-container{
+    display: flex;
+    flex-direction: row ;
+    align-items: flex-start;
+}
+#statsheet-container{
+    height:250px;
+}
+#logcontainer{
+    flex:1;
+}
+textarea{
+    width: 100%;
 }
