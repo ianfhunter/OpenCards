@@ -10,7 +10,8 @@ function refresh_css(){
     }
 } 
 $(document).ready(function(){
-    for(i = 0; i != dealt_hand.length;i++){
+    //TODO: Take Hand length from Rules Files
+    for(i = 0; i != 5;i++){
         card_path = dealt_hand[i].replace("/var/www/OpenCards/","");                        //Get relative backend path
         card_id = card_path.replace("data/yugioh/cards/img/","").replace(".jpg","")         //Get unique id for card
         new_card = "<div class='trapezoid' id='card-"+card_id+"' style='background-image: url("+card_path+");'></div>";

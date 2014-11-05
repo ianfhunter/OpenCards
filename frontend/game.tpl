@@ -10,7 +10,10 @@
 		<div id="mega-container">
 			<div id="temp" style="display:none">
 				<!-- For passing data from the backend to Javascript -->
-				<script> var dealt_hand = jQuery.parseJSON('{{!card_covers}}'); </script>
+				<script> 
+					var dealt_hand = jQuery.parseJSON('{{!card_covers}}'); 
+					var card_names = jQuery.parseJSON('{{!card_names}}')
+				</script>
 			</div>
 			<div id="menubar">
 			    <a href="#">Load Deck</a>
@@ -21,7 +24,7 @@
 
 			<div id="focus-card-container">
 				<img id="focus-card" src="static/images/nocard.jpg" />
-				<h3> No Card Selected </h3>
+				<h3 id="focus-description"> No Card Selected </h3>
 				<div id="focus-content">
 					<!-- <div id="ability">
 						<h4> Ability #1: </h4>
@@ -115,5 +118,6 @@ It has lots of useful information
 			<!-- Load scripts at bottom of page for speedier loading of page and avoiding non-built conflicts -->
 			<script src="static/js/card_focus.js"></script>
 			<script src="static/js/load_game.js"></script>
+			<script src="static/js/movement.js"></script>
 	</body>
 </html>

@@ -1,0 +1,10 @@
+{
+    "Title":"Beaver Warrior",
+    "Ranking": 4,
+    "Element":"Earth",
+    "Description":"A great beaver knight",
+    "Attack":1200,
+    "Defence":1500,
+    "Type":"Beast",
+    "Image":"3.jpg"
+}
