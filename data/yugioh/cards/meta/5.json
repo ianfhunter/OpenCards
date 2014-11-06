@@ -1,0 +1,12 @@
+{
+    "Title":"Hitotsu-Me Giant",
+    "Type":"Monster",
+    "Element":"Earth",
+    "SubType":"Beast-Warrior",
+    "Level": 4,
+    "Description":"A one-eyed behemoth with thick, powerful arms made for delivering punishing blows.",
+    "Rarity":"Common",
+    "Attack":1200,
+    "Defence":1000,
+    "Image":"5.jpg"
+} 

@@ -1,0 +1,12 @@
+{
+    "Title":"Jungle Man",
+    "Type":"Monster",
+    "Element":"Earth",
+    "SubType":"Warrior",
+    "Level": 6,
+    "Description":"This club-wielding warrior battles to the end and will never surrender.",
+    "Rarity":"Common",
+    "Attack":2200,
+    "Defence":1500,
+    "Image":"6.jpg"
+} 
