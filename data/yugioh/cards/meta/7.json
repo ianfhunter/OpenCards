@@ -1,0 +1,12 @@
+{
+    "Title":"Ryu-Kishin",
+    "Type":"Monster",
+    "Element":"Dark",
+    "SubType":"Fiend",
+    "Level": 3,
+    "Description":"A very elusive creature that looks like a harmless statue until it attacks.",
+    "Rarity":"Common",
+    "Attack":1000,
+    "Defence":500,
+    "Image":"7.jpg"
+} 

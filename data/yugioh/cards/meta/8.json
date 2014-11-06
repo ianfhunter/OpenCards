@@ -1,0 +1,13 @@
+{
+    "Title":"The Wicked Worm Beast",
+    "Type":"Effect Monster",
+    "Element":"Earth",
+    "SubType":"Beast",
+    "Level": 3,
+    "Description":"This face-up card on the field is returned to the owner's hand during the End Phase of your turn.",
+    "Effect":"return_to_hand self",
+    "Rarity":"Common",
+    "Attack":1400,
+    "Defence":700,
+    "Image":"8.jpg"
+} 
