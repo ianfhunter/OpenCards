@@ -68,7 +68,7 @@
 			<div id="player-stat-container">
 				<div id="statsheet-container">
 					<div class="statsheet">
-						<img id="opponent-img" src="static/images/profile.jpg" />
+						<img id="opponent-img" src="static/images/avatar1.jpg" />
 						<h3> Opponent_Name </h3>
 						<table>
 							<tr>
@@ -83,7 +83,7 @@
 					</div>
 					<hr />
 					<div class="statsheet">
-						<img id="opponent-img" src="static/images/profile.png" />
+						<img id="opponent-img" src="static/images/avatar2.png" />
 						<h3> Player_Name </h3>
 						<table>
 							<tr>
