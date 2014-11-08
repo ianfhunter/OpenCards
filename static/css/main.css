@@ -11,14 +11,24 @@ body {
 }
 
 
-#opponent-hand-container{
+#opponent-hand-container{ 
 	text-align:center;
 }
 
 #player-hand-container{
 	text-align:center;
+  padding-left: 30%;
+padding-right: 30%;
 }
-.hand{
+#player-hand-container .hand{
+  height: 110px;
+}
+
+#player-hand-container .hand table{
+  width: 100%;
+}
+#player-hand-container .hand td{
+  width: 20px;
 }
 
 .trapezoid {
@@ -140,13 +150,17 @@ body {
   width: 86px;
   position: relative;
 }
-#player-deck-area .trapezoid{
+#player-deck-area .deck{
   position: absolute;
+  width:75px;height: 104px;
+   background-size: 100% 100%;
   bottom: 6px;
   left: 6px;
 }
-#opponent-deck-area .trapezoid{
+#opponent-deck-area .deck{
   position: absolute;
+  width:75px;height: 104px;
+   background-size: 100% 100%;
   top: 6px;
   right: 6px;
 }

@@ -5,6 +5,9 @@
 	<script src="static/js/jquery-2.1.1.min.js"></script>
 	<script src="static/js/jquery-ui.min.js"></script>
 	<script src="static/js/utils.js"></script>
+	<script src="static/js/actionlogger.js"></script>
+	<script src="static/js/jquery-drag.js"></script>
+	<script src="static/js/jquery-drop.js"></script>
 
 </head>
 	<body>
@@ -28,7 +31,7 @@
 			</div>
 
 			<div id="focus-card-container">
-				<img id="focus-card" src="static/images/nocard.jpg" />
+				<img id="focus-card" src="static/images/nocard.png" />
 				<h3 id="focus-title"> No Card Selected </h3>
 				<p id="focus-element"></p>
 				<p id="focus-type"></p>
@@ -63,14 +66,14 @@
 				</div> 
 				<div id="board">
 					<div id="player-deck-area">
-						<div id="player-deck" class="trapezoid" style="background-image: url('static/images/emptydeck.jpg');"></div>
+						<div id="player-deck" class="deck" style="background-image: url('static/images/emptydeck.png');"></div>
 					</div>
 					<div id="play-area">
 						<div id="opponent-area"></div>
 						<div id="player-area"></div>
 					</div>
 					<div id="opponent-deck-area">
-						<div class="trapezoid" style="background-image: url('static/images/emptydeck.jpg');"></div>
+						<div id="opponent-deck" class="deck" style="background-image: url('static/images/emptydeck.png');"></div>
 					</div>
 				</div>
 				<div id="player-hand-container">
@@ -81,6 +84,10 @@
 					</div>
 					<div class="hand">
 						<!--Dynamically Loaded-->
+						<table >
+							<tr>
+							</tr>
+						</table>
 					</div>
 				</div>
 				
@@ -106,8 +113,8 @@
 						</table>
 					</div>
 					<hr />
-					<div class="statsheet">
-						<img id="opponent-img" src="static/images/avatar2.png" />
+					<div class="statsheet"> 
+						<img id="opponent-img" src="static/images/avatar2.jpg" />
 						<h3> Player_Name </h3>
 						<table>
 							<tr>
@@ -122,20 +129,7 @@
 					</div>
 					<hr/>
 				</div>
-					<textarea id="logcontainer" cols="30">
-This is the log. 
-It has lots of useful information
-10:20:43> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:42> Player Drew 2 Cards
-10:20:41> Player Drew 2 Cards
+					<textarea id="logcontainer" cols="30">Welcome To OpenCards. Enjoy
 					</textarea>
 			</div>
 		</div>

@@ -12,6 +12,7 @@ function uniqueRandomNumbers(amount,range){
 }
 
 function advanceTurn(){
+  log("Turn advanced")
   slider = $("#player-hand-container .turn input");
   new_turn = parseInt(slider.val())+1;
   max_turn = parseInt(slider.attr("max"));
@@ -30,18 +31,37 @@ function draw_cards(amount){
     if(window.player_deck.length == 0){
       $("#player-deck").css("background-image","url('static/images/emptydeck.jpg')");
       return false
-    }
+    } 
 
     //add in variable
     new_card = window.player_deck.pop();
-    window.player_hand.push(new_card);
+    window.player_hand.push(new_card); 
 
-    $("#player-hand-container .hand").append("<div class='trapezoid' style=\"background-image: url('data/yugioh/cards/img/"+new_card["Image"]+"');opacity:0\"></div>");
+    log("Drew a card")
+
+    $("#player-hand-container .hand tr").append("<td><div class='trapezoid' style=\"background-image: url('data/yugioh/cards/img/"+new_card["Image"]+"');opacity:0;position:absolute;\"></div></td>");
+    $( "#player-hand-container .hand .trapezoid" ).drag(function(ev,dd){
+        $( this ).css({
+            top: dd.offsetY,
+            left: dd.offsetX
+        });
+      },
+      { 
+        relative:true
+      }
+    );
     $("#player-hand-container .hand .trapezoid").animate({opacity: 1}, 800);
+
+    //if no cards after drawing
+    if(window.player_deck.length == 0){
+      $("#player-deck").css("background-image","url('static/images/emptydeck.jpg')");
+      return false
+    }
   }
 }
 
 function shuffle_cards(cards){
+  log("Cards shuffled")
   //if dict
   //if array
 

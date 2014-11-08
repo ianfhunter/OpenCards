@@ -19,25 +19,25 @@ function reload_hover_click_effects(){
         }
         if(typeof focussed == 'undefined'){
             console.log("Not a viewable card");
-            $("#focus-card").attr("src","static/images/nocard.jpg");
-            $("#focussed-title").text("No card Selected");
-            $("#focussed-attack").text("");
-            $("#focussed-defence").text("");
-            $("#focussed-description").text("");
-            $("#focussed-level").text("");
-            $("#focussed-element").text("");
-            $("#focussed-type").text("");
-            $("#focussed-subtype").text("");
+            $("#focus-card").attr("src","static/images/nocard.png");
+            $("#focus-title").text("No card Selected");
+            $("#focus-attack").text("");
+            $("#focus-defence").text("");
+            $("#focus-description").text("");
+            $("#focus-level").text("");
+            $("#focus-element").text("");
+            $("#focus-type").text("");
+            $("#focus-subtype").text("");
         }else{
             $("#focus-card").attr("src","data/yugioh/cards/img/"+focussed["Image"]);
-            $("#focussed-title").text(focussed["Title"]);
-            $("#focussed-attack").text(focussed["Attack"]);
-            $("#focussed-defence").text(focussed["Defence"]);
-            $("#focussed-description").text(focussed["Description"]);
-            $("#focussed-level").text(focussed["Level"]);
-            $("#focussed-element").text(focussed["Element"]);
-            $("#focussed-type").text(focussed["Type"]);
-            $("#focussed-subtype").text(focussed["Subtype"]);
+            $("#focus-title").text(focussed["Title"]);
+            $("#focus-attack").text(focussed["Attack"]);
+            $("#focus-defence").text(focussed["Defence"]);
+            $("#focus-description").text(focussed["Description"]);
+            $("#focus-level").text(focussed["Level"]);
+            $("#focus-element").text(focussed["Element"]);
+            $("#focus-type").text(focussed["Type"]);
+            $("#focus-subtype").text(focussed["Subtype"]);
         }
     }); 
 } 
