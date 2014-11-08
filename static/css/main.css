@@ -132,7 +132,21 @@ body {
     background-color: blue;
     min-height: 30px;
     flex:1;
+    display: flex;
 }
+#player-deck-area{
+  background-color: red;
+  width: 100px;
+}
+#opponent-deck-area{
+  background-color: red;
+  width: 100px;
+}
+#play-area{
+  flex:1;
+}
+
+
 #mega-container{
     display: flex;
     flex-direction: row ;
@@ -146,4 +160,7 @@ body {
 }
 textarea{
     width: 100%;
+}
+#focus-level, #focus-attack, #focus-defence{
+  display: inline-block;
 }

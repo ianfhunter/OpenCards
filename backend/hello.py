@@ -19,25 +19,29 @@ def server_cards(filename):
     return static_file(filename, root='data/yugioh/cards/img/')
 
 
-def load_deck(field,prepend="",postpend=""):
-    cardset = {}
-    count = 0
+#TODO: Implement limiting of deck sizes (and hence, randomising which are put in also)
+def load_deck():
+    cardset = []
     for metafile in glob.glob("data/yugioh/cards/meta/*.json"):
+        #Get all Json Cards and place them in a deck
         json_data = open(metafile)
-        cardId = metafile.replace("data/yugioh/cards/meta/","")
-        cardId = cardId.replace(".json","")
         parsed = json.load(json_data)
-        cardset[""+cardId] = prepend+  parsed[field] +postpend
-        count = count + 1
+
+        parsed["Description"] = parsed["Description"].replace("\'","")
+        cardset.append(parsed)
 
     return cardset
-    #return glob.glob("data/yugioh/cards/img/*.jpg")
 
 @route('/')
 def game_page():
+    player_deck = json.dumps( load_deck() )
+    opponent_deck = json.dumps( load_deck() )
+    return template('frontend/game.tpl',player_deck=player_deck,opponent_deck=opponent_deck)
 
-    card_covers =json.dumps( load_deck("Image","data/yugioh/cards/img/") )
-    card_names =json.dumps( load_deck("Title") )
-    return template('frontend/game.tpl',card_covers=card_covers,card_names=card_names)
+
+@route('/create/')
+def creation_page():
+
+    return template('frontend/create.tpl')
 
 run(host='5.196.1.72', port=8080, debug=True)

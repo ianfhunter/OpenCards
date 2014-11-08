@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
 	<script src="static/js/jquery-2.1.1.min.js"></script>
 	<script src="static/js/jquery-ui.min.js"></script>
+	<script src="static/js/utils.js"></script>
 
 </head>
 	<body>
@@ -11,11 +12,15 @@
 			<div id="temp" style="display:none">
 				<!-- For passing data from the backend to Javascript -->
 				<script> 
-					var dealt_hand = jQuery.parseJSON('{{!card_covers}}'); 
-					var card_names = jQuery.parseJSON('{{!card_names}}')
+					window.player_deck = jQuery.parseJSON('{{!player_deck}}'); 
+					window.opponent_deck = jQuery.parseJSON('{{!opponent_deck}}');
+					window.game_cards = window.player_deck.concat(window.opponent_deck);
+					window.player_hand = []; 
+					window.opponent_hand = [];
 				</script>
 			</div>
 			<div id="menubar">
+				<a href="create/">Add Card [Temp Option]</a>
 			    <a href="#">Load Deck</a>
 			    <a href="#">Find Player</a> 
 			    <a href="#">Guide</a>
@@ -24,16 +29,24 @@
 
 			<div id="focus-card-container">
 				<img id="focus-card" src="static/images/nocard.jpg" />
-				<h3 id="focus-description"> No Card Selected </h3>
+				<h3 id="focus-title"> No Card Selected </h3>
+				<p id="focus-element"></p>
+				<p id="focus-type"></p>
+				<p id="focus-subtype"></p>
+				Level <h3 id="focus-level">  </h3>
+				Att:<h3 id="focus-attack"> </h3>
+				Def:<h3 id="focus-defence">  </h3>
+				<p id="focus-description"></p>
+
 				<div id="focus-content">
 					<!-- <div id="ability">
 						<h4> Ability #1: </h4>
 						<a href="#">Magic Sparkle Attack</a>
 						<text>A powerful Water-based attack -5NRG 20DMG</text>
 						<br /> -->
-					</div>
+				</div>
 			</div>
-
+ 
 			<div id="playarea">
 				<div id="opponent-hand-container">
 					<div class="hand">
@@ -44,16 +57,25 @@
 						<div class="trapezoid" style="background-image: url('static/images/cardback.png');"></div>
 					</div>
 					<div class="turn"> 
-						<input type="range" min="1" max="5" value="1" />
+						<!-- TODO: Change this to use turn amount from rules.json -->
+						<input type="range" min="1" max="5" value="1" disabled="true" />
 					</div>
-				</div>
+				</div> 
 				<div id="board">
-
+					<div id="player-deck-area">
+						<div id="player-deck" class="trapezoid" style="background-image: url('static/images/emptydeck.jpg');"></div>
+					</div>
+					<div id="play-area">
+					</div>
+					<div id="player-deck-area">
+						<div class="trapezoid" style="background-image: url('static/images/emptydeck.jpg');"></div>
+					</div>
 				</div>
 				<div id="player-hand-container">
 					<div class="turn"> 
-						<input type="range" min="1" max="5" value="1" />
-						<button type="button">Advance Stage</button>
+						<input type="range" min="1" max="5" value="1" disabled="true" />
+						<button type="button" onclick="advanceTurn()">Advance Stage</button>
+						<button type="button" onclick="draw_cards(1)">Draw Card</button>
 					</div>
 					<div class="hand">
 						<!--Dynamically Loaded-->
@@ -61,7 +83,7 @@
 				</div>
 				
 			</div>
-
+ 
 
 
 
