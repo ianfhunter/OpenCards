@@ -66,8 +66,10 @@
 						<div id="player-deck" class="trapezoid" style="background-image: url('static/images/emptydeck.jpg');"></div>
 					</div>
 					<div id="play-area">
+						<div id="opponent-area"></div>
+						<div id="player-area"></div>
 					</div>
-					<div id="player-deck-area">
+					<div id="opponent-deck-area">
 						<div class="trapezoid" style="background-image: url('static/images/emptydeck.jpg');"></div>
 					</div>
 				</div>

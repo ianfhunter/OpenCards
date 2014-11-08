@@ -23,7 +23,8 @@ body {
 
 .trapezoid {
   background-size: 100% 100%;
-  width:100px; height:140px;
+  //width:100px; height:140px;
+  width:75px;height: 100px;
 
   display:inline-block;
 }
@@ -31,8 +32,8 @@ body {
 #opponent-hand-container .hand .trapezoid{
   margin-bottom:-10px;
   // -webkit-transform: rotateX(8deg) scale(0.8);
-    margin-right: -9px;
-    margin-left: -9px;
+    margin-right: -4px;
+    margin-left: -4px;
     margin-top: 18px;
   //transform: rotateX(8deg) scale(0.8);
 }
@@ -134,16 +135,32 @@ body {
     flex:1;
     display: flex;
 }
-#player-deck-area{
+#player-deck-area ,#opponent-deck-area{
   background-color: red;
-  width: 100px;
+  width: 86px;
+  position: relative;
 }
-#opponent-deck-area{
-  background-color: red;
-  width: 100px;
+#player-deck-area .trapezoid{
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+}
+#opponent-deck-area .trapezoid{
+  position: absolute;
+  top: 6px;
+  right: 6px;
 }
 #play-area{
   flex:1;
+  display: flex;
+  flex-direction: column;
+}
+#opponent-area,#player-area{
+  height: 50%;
+  width: 100%;
+}
+#opponent-area{
+  background-color: yellow;
 }
 
 
